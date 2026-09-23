@@ -35,13 +35,14 @@ The two other responding hosts were selected for further service enumeration and
 ### 📸 Evidence
 
 ![Initial Nmap and Service Scan](screenshots/01-initial-nmap-and-service-scan.png)
+
+
 ## 🖥️ SMB and MSRPC Enumeration
 
 Further enumeration of the host `10.0.2.2` identified two open TCP ports:
 
 * **Port 135** — MSRPC (Microsoft Remote Procedure Call)
 * **Port 445** — SMB (Server Message Block)
-
 Port 445 was investigated further to understand the SMB service and its security configuration.
 
 ### SMB Protocol Enumeration
@@ -69,6 +70,13 @@ Requiring SMB message signing is an important security control because it helps 
 ### Assessment
 
 The enumeration confirmed that SMB was exposed on TCP port 445 and that message signing was enabled and required. No security weakness was established from the SMB protocol enumeration or signing check alone.
+
+### 📸 Evidence
+
+![SMB Protocol Enumeration](screenshots/02-smb-protocols.png)
+
+![SMB Message Signing](screenshots/03-smb-signing.png)
+
 
 ## 🛡️ SMB Vulnerability Assessment
 
