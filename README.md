@@ -43,6 +43,7 @@ Further enumeration of the host `10.0.2.2` identified two open TCP ports:
 
 * **Port 135** — MSRPC (Microsoft Remote Procedure Call)
 * **Port 445** — SMB (Server Message Block)
+  
 Port 445 was investigated further to understand the SMB service and its security configuration.
 
 ### SMB Protocol Enumeration
