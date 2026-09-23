@@ -167,7 +167,7 @@ This indicated that the DNS server did not disclose its software/version through
 A recursive DNS query was performed to determine whether the server could resolve an external domain:
 
 ```bash
-dig @10.0.2.3 google.com
+dig @10.0.2.3 example.com
 ```
 
 The query successfully returned an IP address for `google.com`. The response flags included:
