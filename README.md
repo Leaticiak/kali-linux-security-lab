@@ -170,7 +170,7 @@ A recursive DNS query was performed to determine whether the server could resolv
 dig @10.0.2.3 example.com
 ```
 
-The query successfully returned an IP address for `google.com`. The response flags included:
+The query successfully returned an IP address for `example.com`. The response flags included:
 
 * `rd` — Recursion Desired
 * `ra` — Recursion Available
