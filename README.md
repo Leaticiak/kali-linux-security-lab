@@ -120,6 +120,29 @@ nmap -sV -p 53 10.0.2.3
 
 Nmap identified port 53 as a DNS service but could not determine the exact DNS software or version.
 
+### 📸 Evidence
+
+![DNS Service Detection](screenshots/05-dns-service-scan.png)
+
+### DNS Root Nameserver Query
+
+A query for the root zone's nameserver records was performed to observe how the DNS server responded to a request for root DNS information:
+
+```bash
+dig @10.0.2.3 . NS
+```
+
+The server successfully returned the nameserver records for the DNS root zone.
+
+This demonstrated that the DNS service was able to process and respond to queries for root nameserver information.
+
+### 📸 Evidence
+
+![DNS Root Nameserver Query](screenshots/06-dns-root-ns.png)
+
+
+### DNS Version Query
+
 A DNS version query was then performed:
 
 ```bash
@@ -133,6 +156,10 @@ The server responded with:
 ```
 
 This indicated that the DNS server did not disclose its software/version through this query.
+
+### 📸 Evidence
+
+![DNS Version Query](screenshots/07-dns-version-query.png)
 
 ### Recursive DNS Resolution
 
@@ -151,6 +178,10 @@ This provided evidence that recursive DNS resolution was available for the query
 
 Recursive DNS is not automatically a vulnerability, but its availability should be assessed against the intended network design and access controls.
 
+### 📸 Evidence
+
+![DNS Recursive Query](screenshots/08-dns-recursive-query.png)
+
 ### DNS Zone Transfer (AXFR)
 
 A zone transfer was tested using:
@@ -167,6 +198,10 @@ Transfer failed.
 
 The requested zone transfer was therefore unsuccessful, and the server did not disclose the zone through this AXFR request.
 
+### 📸 Evidence
+
+![DNS Zone Transfer Test](screenshots/09-dns-zone-transfer.png)
+
 ### Reverse DNS Lookup
 
 A reverse DNS lookup was performed using:
@@ -182,6 +217,10 @@ mba01s10-in-f14.1e100.net.
 ```
 
 This demonstrated successful reverse DNS resolution, mapping the IP address `172.217.170.206` to an associated hostname.
+
+### 📸 Evidence
+
+![Reverse DNS Lookup](screenshots/10-reverse-dns.png)
 
 ### Assessment
 
