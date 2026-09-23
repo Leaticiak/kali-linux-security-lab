@@ -102,6 +102,10 @@ One vulnerability check returned a negative result, while two checks could not b
 
 This demonstrates the importance of distinguishing between a vulnerability that was **not detected** and a security test that **could not be completed**.
 
+### 📸 Evidence
+
+![SMB Vulnerability Assessment](screenshots/04-vulnerability-scan.png)
+
 ## 🌐 DNS Enumeration
 
 The initial scan of `10.0.2.3` identified **TCP port 53** as open and associated with the DNS service. Further enumeration was performed to understand the DNS service, determine whether software/version information was disclosed, and examine selected DNS functions.
